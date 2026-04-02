@@ -4,38 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radiant Collective Capital - The Future Will Be Funded By African Women</title>
-    <meta name="description" content="Join the financial learning and co-investment community for African women">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Join the financial learning and co-investment community for African women building wealth, legacy, and prosperity.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 </head>
 <body>
-    <!-- Dynamic Header -->
-    <header class="site-header" id="siteHeader">
-        <div class="header-container">
-            <div class="header-left">
-                <a href="index.html" class="logo">Radiant Collective</a>
-            </div>
-            <nav class="header-center desktop-nav">
-                <a href="membership.html">Membership</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="header-right">
-                <a href="login.html" class="login-btn">Log In</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">Radiant Collective</a>
+                
+                <nav class="header-nav desktop-hidden-mobile">
+                    <a href="membership.html">Membership</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="login.html" class="header-login desktop-hidden-mobile">Log In</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-        <nav class="mobile-nav">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
             <a href="membership.html">Membership</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
@@ -44,126 +55,176 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="heroSection">
+    <section class="hero bg-base">
         <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-headline animated-heading">The Future Will Be Funded By African Women</h1>
-                <p class="hero-subheading">Join the financial learning and co-investment community for African women</p>
+            <div class="hero-content reveal-on-scroll">
+                <h1>The Future Will Be Funded By African Women</h1>
+                <p>Join the financial learning and co-investment community for African women building wealth, legacy, and prosperity.</p>
                 <div class="hero-cta">
-                    <a href="membership.html" class="btn btn-primary">Explore Membership</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    <a href="membership.html" class="btn btn-primary btn-large">Explore Membership</a>
+                    <a href="about.html" class="btn btn-secondary btn-large">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Logo Ticker Section -->
-    <section class="logo-ticker-section">
-        <div class="ticker-container">
-            <div class="ticker-track" id="tickerTrack">
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 1</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 2</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 3</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 4</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 5</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 6</div>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 1</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 2</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 3</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 4</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 5</div>
-                </div>
-                <div class="ticker-item">
-                    <div class="placeholder-logo">Partner 6</div>
-                </div>
+    <!-- Logo Ticker -->
+    <section class="logo-ticker bg-base">
+        <div class="logo-ticker-track">
+            <!-- First set -->
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 1</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 2</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 3</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 4</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 5</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 6</text>
+                </svg>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 1</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 2</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 3</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 4</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 5</text>
+                </svg>
+            </div>
+            <div class="logo-ticker-item">
+                <svg width="140" height="60" viewBox="0 0 140 60" fill="none">
+                    <rect x="10" y="15" width="120" height="30" rx="4" fill="#cfa962" opacity="0.2"/>
+                    <text x="70" y="38" text-anchor="middle" fill="#6b6b6b" font-size="14" font-weight="600">Partner 6</text>
+                </svg>
             </div>
         </div>
     </section>
 
-    <!-- What We're Building Section -->
-    <section class="building-section alternate-bg-1">
+    <!-- What We're Building -->
+    <section class="bg-alt-1">
         <div class="container">
-            <div class="building-grid">
-                <div class="building-left fade-in-up">
-                    <h2 class="animated-heading">What We're Building</h2>
-                    <h3>Small Checks, Big Impact</h3>
-                    <p>We're building a world where women and wealth are no longer divergent. Radiant enables members to:</p>
-                    <ul class="check-list">
-                        <li>Tap into off-market, impact-driven investment opportunities</li>
-                        <li>Speak the language of money and wealth with confidence</li>
-                        <li>Invest in real estate, tech, and other high-growth sectors</li>
-                    </ul>
+            <div class="stacked-section">
+                <div>
+                    <h2 class="mb-4">What We're Building</h2>
+                    <h3 class="mb-4">Small Checks, Big Impact</h3>
+                    <p class="text-large mb-6">We're building a world where women and wealth are no longer divergent. Radiant enables members to:</p>
+                    <div class="grid" style="gap: var(--space-3); margin-bottom: var(--space-6);">
+                        <div style="display: flex; align-items: start; gap: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-accent);">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <p>Tap into off-market, impact-driven investment opportunities</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-accent);">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <p>Speak the language of money and wealth with confidence</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; color: var(--color-accent);">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <p>Invest in real estate, tech, and other high-growth sectors</p>
+                        </div>
+                    </div>
                     <a href="membership.html" class="btn btn-primary">Apply to Join</a>
                 </div>
-                <div class="building-right">
-                    <div class="stacking-cards" id="stackingCards">
-                        <div class="team-card" data-index="0">
-                            <div class="team-card-image">
-                                <div class="placeholder-image">Team Member 1</div>
-                            </div>
-                            <h4>Udo Okonjo</h4>
-                            <p>Founder & Chief Igniter</p>
+                <div class="grid-3">
+                    <div class="team-card">
+                        <div class="team-card-image">
+                            <img data-src="assets/images/team/udo-okonjo.jpg" alt="Udo Okonjo" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EUdo Okonjo%3C/text%3E%3C/svg%3E">
                         </div>
-                        <div class="team-card" data-index="1">
-                            <div class="team-card-image">
-                                <div class="placeholder-image">Team Member 2</div>
-                            </div>
-                            <h4>Fadekemi Abiru</h4>
-                            <p>Chief Investment Officer</p>
+                        <h3>Udo Okonjo</h3>
+                        <p>Founder & Chief Igniter</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-image">
+                            <img data-src="assets/images/team/fadekemi-abiru.jpg" alt="Fadekemi Abiru" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EFadekemi Abiru%3C/text%3E%3C/svg%3E">
                         </div>
-                        <div class="team-card" data-index="2">
-                            <div class="team-card-image">
-                                <div class="placeholder-image">Team Member 3</div>
-                            </div>
-                            <h4>Anwulika Okonjo</h4>
-                            <p>Chief Operations Officer</p>
+                        <h3>Fadekemi Abiru</h3>
+                        <p>Chief Investment Officer</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-image">
+                            <img data-src="assets/images/team/anwulika-okonjo.jpg" alt="Anwulika Okonjo" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EAnwulika Okonjo%3C/text%3E%3C/svg%3E">
                         </div>
+                        <h3>Anwulika Okonjo</h3>
+                        <p>Chief Operations Officer</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Membership Highlight Section -->
-    <section class="membership-highlight-section alternate-bg-2">
+    <!-- Membership Highlight -->
+    <section class="bg-alt-2">
         <div class="container">
-            <h2 class="section-title fade-in-up animated-heading">Join a legacy-building movement</h2>
-            <div class="membership-grid">
-                <div class="membership-card-spotlight fade-in-up">
+            <div class="section-header">
+                <h2>Join a Legacy-Building Movement</h2>
+            </div>
+            <div class="split-content">
+                <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Annual Membership</h3>
-                        <div class="pricing">
+                        <div class="price-display">
                             <span class="price-old">$650</span>
                             <span class="price-arrow">→</span>
                             <span class="price-new">$500</span>
                         </div>
-                        <p class="pricing-note">Limited time Founding members' discount</p>
+                        <p class="pricing-note">Limited time Founding Members' discount</p>
                     </div>
-                    <div class="membership-benefits">
+                    <div class="pricing-features">
                         <h4>Includes</h4>
-                        <ul class="tick-list">
+                        <ul class="pricing-list">
                             <li>Access to exclusive investment deals</li>
                             <li>Invitations to investor salons and masterclasses</li>
                             <li>Ongoing financial education and resources</li>
@@ -173,14 +234,14 @@
                     </div>
                     <a href="membership.html" class="btn btn-primary btn-full">Apply for Membership</a>
                 </div>
-                <div class="membership-cta-right fade-in-up">
-                    <h3>Ready to build wealth, together?</h3>
-                    <div class="rolling-text-container">
-                        <span class="static-text">Let's</span>
-                        <div class="rolling-text" id="rollingText">
-                            <div class="rolling-word active">Democratise capital</div>
-                            <div class="rolling-word">Invest in ourselves</div>
-                            <div class="rolling-word">Transform the future</div>
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3 class="mb-4">Ready to build wealth, together?</h3>
+                    <div style="display: flex; align-items: baseline; gap: var(--space-2); font-size: var(--font-2xl); font-weight: var(--weight-medium);">
+                        <span>Let's</span>
+                        <div class="rolling-text" style="position: relative; height: 1.2em; overflow: hidden;">
+                            <div class="rolling-word active" style="position: absolute; color: var(--color-accent);">Democratise Capital</div>
+                            <div class="rolling-word" style="position: absolute; color: var(--color-accent);">Invest in Ourselves</div>
+                            <div class="rolling-word" style="position: absolute; color: var(--color-accent);">Transform the Future</div>
                         </div>
                     </div>
                 </div>
@@ -188,17 +249,17 @@
         </div>
     </section>
 
-    <!-- Email Capture Section -->
-    <section class="email-capture-section alternate-bg-3">
+    <!-- Email Capture -->
+    <section class="bg-alt-3">
         <div class="container">
-            <div class="email-capture-content fade-in-up">
-                <h2 class="animated-heading">We don't just want a seat at the table.<br>We're building our own.</h2>
-                <p class="supporting-text">We bridge the gap between women and high-value investments, shifting access from privilege to community.</p>
-                <form class="email-form" id="emailForm">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <h2 class="mb-4">We don't just want a seat at the table.<br>We're building our own.</h2>
+                <p class="text-large mb-6">We bridge the gap between women and high-value investments, shifting access from privilege to community.</p>
+                <form class="email-form" style="display: flex; gap: var(--space-3); margin-bottom: var(--space-3);">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
-                <p class="disclaimer">By clicking Sign Up you're confirming that you agree with our <a href="#">Terms and Conditions</a></p>
+                <p class="text-small text-muted">By clicking Sign Up you're confirming that you agree with our <a href="#" style="color: var(--color-accent); text-decoration: underline;">Terms and Conditions</a></p>
             </div>
         </div>
     </section>
@@ -209,7 +270,7 @@
             <div class="footer-top">
                 <div class="footer-newsletter">
                     <h3>Keep up with us</h3>
-                    <form class="footer-email-form">
+                    <form>
                         <input type="email" placeholder="Email sign up" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
@@ -225,12 +286,12 @@
                 <div class="footer-column">
                     <a href="membership.html">Membership Info</a>
                     <a href="#">Member Portal</a>
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
                 </div>
                 <div class="footer-column">
                     <a href="#">Upcoming Events</a>
                     <a href="about.html">Investment Opportunities</a>
-                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
                 <div class="footer-column">
                     <a href="login.html">Login</a>
@@ -240,6 +301,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

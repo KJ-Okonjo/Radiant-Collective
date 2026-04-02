@@ -4,36 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Radiant Collective Capital</title>
-    <meta name="description" content="Women. Wealth. Impact. Reimagined.">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header" id="siteHeader">
-        <div class="header-container">
-            <div class="header-left">
-                <a href="index.html" class="logo">Radiant Collective</a>
-            </div>
-            <nav class="header-center desktop-nav">
-                <a href="membership.html">Membership</a>
-                <a href="about.html" class="active">About Us</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="header-right">
-                <a href="login.html" class="login-btn">Log In</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">Radiant Collective</a>
+                <nav class="header-nav desktop-hidden-mobile">
+                    <a href="membership.html">Membership</a>
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="header-login desktop-hidden-mobile">Log In</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-        <nav class="mobile-nav">
+    <div class="mobile-menu">
+        <nav>
             <a href="membership.html">Membership</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
@@ -41,113 +38,106 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section about-hero">
+    <section class="hero bg-base" style="min-height: 80vh;">
         <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-headline animated-heading">Women. Wealth. Impact. Reimagined.</h1>
-                <p class="hero-subheading">You don't need permission to build wealth, move capital, or change the rules. You just need the right platform.</p>
+            <div class="hero-content reveal-on-scroll">
+                <h1>Women. Wealth. Impact. Reimagined.</h1>
+                <p>You don't need permission to build wealth, move capital, or change the rules. You just need the right platform.</p>
                 <div class="hero-cta">
-                    <a href="membership.html" class="btn btn-primary">Apply for Membership</a>
-                    <a href="contact.html" class="btn btn-secondary">Partner With Us</a>
+                    <a href="membership.html" class="btn btn-primary btn-large">Apply for Membership</a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">Partner With Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey Line SVG -->
-    <svg class="journey-line" id="journeyLine" xmlns="http://www.w3.org/2000/svg">
-        <path class="journey-path" d="" fill="none" stroke="#cfa962" stroke-width="3"/>
-    </svg>
-
-    <!-- Our Purpose Section -->
-    <section class="purpose-section alternate-bg-1" data-journey-point>
+    <section class="bg-alt-1">
         <div class="container">
-            <div class="content-wrapper fade-in-up">
-                <h2 class="animated-heading">Our Purpose</h2>
-                <p>We exist to close the wealth gap, demystify investment, and equip women across Africa and the diaspora to rise as owners, decision-makers, and legacy-builders.</p>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 class="mb-4">Our Purpose</h2>
+                <p class="text-large">We exist to close the wealth gap, demystify investment, and equip women across Africa and the diaspora to rise as owners, decision-makers, and legacy-builders.</p>
             </div>
         </div>
     </section>
 
-    <!-- Our Why Section -->
-    <section class="why-section" data-journey-point>
+    <section class="bg-base">
         <div class="container">
-            <div class="content-wrapper fade-in-up">
-                <h2 class="animated-heading">Our Why</h2>
-                <p class="lead-text">Despite driving economies, building businesses, and leading families, African women are still locked out of the structures that create generational wealth.</p>
-                <div class="manifesto">
-                    <p>We don't own the banks.</p>
-                    <p>We don't lead the deals.</p>
-                    <p class="highlight">Radiant changes that.</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="mb-4 text-center">Our Why</h2>
+                <p class="text-large mb-6">Despite driving economies, building businesses, and leading families, African women are still locked out of the structures that create generational wealth.</p>
+                <div style="background: var(--color-alt-1); padding: var(--space-6); border-radius: var(--radius-xl); margin: var(--space-6) 0;">
+                    <p style="font-size: var(--font-xl); margin-bottom: var(--space-2);">We don't own the banks.</p>
+                    <p style="font-size: var(--font-xl); margin-bottom: var(--space-2);">We don't lead the deals.</p>
+                    <p style="font-size: var(--font-2xl); color: var(--color-accent); font-weight: var(--weight-semibold);">Radiant changes that.</p>
                 </div>
-                <p>We're creating a high-trust, high-access ecosystem where women invest from the ground up, together.</p>
+                <p class="text-large">We're creating a high-trust, high-access ecosystem where women invest from the ground up, together.</p>
             </div>
         </div>
     </section>
 
-    <!-- Core Pillars Section -->
-    <section class="pillars-section alternate-bg-2" data-journey-point>
+    <section class="bg-alt-2">
         <div class="container">
-            <h2 class="section-title fade-in-up animated-heading">Core Pillars</h2>
-            <div class="pillars-grid">
-                <div class="pillar-card fade-in-up">
+            <div class="section-header">
+                <h2>Core Pillars</h2>
+            </div>
+            <div class="grid-2">
+                <div class="feature-card">
                     <h3>Empower</h3>
-                    <p>Unlocking capital, confidence, and community for African women across the world</p>
+                    <p>Unlocking capital, confidence, and community for African women across the world.</p>
                 </div>
-                <div class="pillar-card fade-in-up">
+                <div class="feature-card">
                     <h3>Opportunities</h3>
-                    <p>Curated, accessible co-investment opportunities</p>
+                    <p>Curated, accessible co-investment opportunities.</p>
                 </div>
-                <div class="pillar-card fade-in-up">
+                <div class="feature-card">
                     <h3>Education</h3>
-                    <p>Bold financial education rooted in real-world decision-making</p>
+                    <p>Bold financial education rooted in real-world decision-making.</p>
                 </div>
-                <div class="pillar-card fade-in-up">
+                <div class="feature-card">
                     <h3>Community</h3>
-                    <p>A trusted collective of women rewriting the rules of power and prosperity</p>
+                    <p>A trusted collective of women rewriting the rules of power and prosperity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section alternate-bg-3" data-journey-point>
+    <section class="bg-alt-3">
         <div class="container">
-            <h2 class="section-title fade-in-up animated-heading">Team</h2>
-            <div class="team-grid">
-                <div class="team-member fade-in-up">
-                    <div class="team-image">
-                        <div class="placeholder-image">Team Photo</div>
+            <div class="section-header">
+                <h2>Team</h2>
+            </div>
+            <div class="grid-3">
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img data-src="assets/images/team/udo-okonjo.jpg" alt="Udo Okonjo" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EUdo Okonjo%3C/text%3E%3C/svg%3E">
                     </div>
                     <h3>Udo Okonjo</h3>
-                    <p class="team-role">Founder & Chief Igniter</p>
+                    <p>Founder & Chief Igniter</p>
                 </div>
-                <div class="team-member fade-in-up">
-                    <div class="team-image">
-                        <div class="placeholder-image">Team Photo</div>
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img data-src="assets/images/team/fadekemi-abiru.jpg" alt="Fadekemi Abiru" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EFadekemi Abiru%3C/text%3E%3C/svg%3E">
                     </div>
                     <h3>Fadekemi Abiru</h3>
-                    <p class="team-role">Chief Investment Officer</p>
+                    <p>Chief Investment Officer</p>
                 </div>
-                <div class="team-member fade-in-up">
-                    <div class="team-image">
-                        <div class="placeholder-image">Team Photo</div>
+                <div class="team-card">
+                    <div class="team-card-image">
+                        <img data-src="assets/images/team/anwulika-okonjo.jpg" alt="Anwulika Okonjo" src="data:image/svg+xml,%3Csvg width='400' height='500' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='500' fill='%23faf0f3'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%236b6b6b'%3EAnwulika Okonjo%3C/text%3E%3C/svg%3E">
                     </div>
                     <h3>Anwulika Okonjo</h3>
-                    <p class="team-role">Chief Operations Officer</p>
+                    <p>Chief Operations Officer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stay Connected Section -->
-    <section class="stay-connected-section" data-journey-point>
+    <section class="bg-base">
         <div class="container">
-            <div class="content-wrapper fade-in-up">
-                <h2 class="animated-heading">Stay Connected</h2>
-                <p>Subscribe to our newsletter for updates on events, opportunities, and community news</p>
-                <form class="email-form centered">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 class="mb-4">Stay Connected</h2>
+                <p class="text-large mb-6">Subscribe to our newsletter for updates on events, opportunities, and community news.</p>
+                <form class="email-form" style="display: flex; gap: var(--space-3);">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-primary">Subscribe</button>
                 </form>
@@ -155,13 +145,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-newsletter">
                     <h3>Keep up with us</h3>
-                    <form class="footer-email-form">
+                    <form>
                         <input type="email" placeholder="Email sign up" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
@@ -172,15 +161,12 @@
                 <div class="footer-column">
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Support</a>
-                    <a href="#">Follow Us</a>
                 </div>
                 <div class="footer-column">
                     <a href="membership.html">Membership Info</a>
-                    <a href="#">Member Portal</a>
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </div>
                 <div class="footer-column">
-                    <a href="#">Upcoming Events</a>
                     <a href="about.html">Investment Opportunities</a>
                     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
                 </div>
@@ -192,6 +178,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

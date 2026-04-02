@@ -4,36 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Radiant Collective Capital</title>
-    <meta name="description" content="Get in touch with Radiant Collective Capital">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header" id="siteHeader">
-        <div class="header-container">
-            <div class="header-left">
-                <a href="index.html" class="logo">Radiant Collective</a>
-            </div>
-            <nav class="header-center desktop-nav">
-                <a href="membership.html">Membership</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-            <div class="header-right">
-                <a href="login.html" class="login-btn">Log In</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">Radiant Collective</a>
+                <nav class="header-nav desktop-hidden-mobile">
+                    <a href="membership.html">Membership</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="header-login desktop-hidden-mobile">Log In</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-        <nav class="mobile-nav">
+    <div class="mobile-menu">
+        <nav>
             <a href="membership.html">Membership</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
@@ -41,37 +38,35 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section contact-hero">
+    <section class="hero bg-base" style="min-height: 60vh;">
         <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-headline animated-heading">Get in Touch</h1>
-                <p class="hero-subheading">We'd love to hear from you</p>
+            <div class="hero-content reveal-on-scroll">
+                <h1>Get in Touch</h1>
+                <p>We'd love to hear from you.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <section class="bg-base" style="padding-top: 0;">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info fade-in-up">
-                    <h2>Contact Information</h2>
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <a href="mailto:hello@radiantcollective.capital">hello@radiantcollective.capital</a>
+            <div class="stacked-section">
+                <div>
+                    <h2 class="mb-4">Contact Information</h2>
+                    <div class="mb-6">
+                        <h3 class="mb-2">Email</h3>
+                        <a href="mailto:hello@radiantcollective.capital" style="color: var(--color-accent); font-size: var(--font-lg); text-decoration: underline;">hello@radiantcollective.capital</a>
                     </div>
-                    <div class="contact-item">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="https://instagram.com" target="_blank" class="social-link">Instagram</a>
-                            <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+                    <div>
+                        <h3 class="mb-2">Follow Us</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+                            <a href="https://instagram.com" target="_blank" style="color: var(--color-accent); text-decoration: underline;">Instagram</a>
+                            <a href="https://linkedin.com" target="_blank" style="color: var(--color-accent); text-decoration: underline;">LinkedIn</a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-wrapper fade-in-up">
-                    <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
+                <div>
+                    <h2 class="mb-4">Send Us a Message</h2>
+                    <form id="contactForm" style="background: #fff; padding: var(--space-6); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
                         <div class="form-group">
                             <label for="contactName">Name *</label>
                             <input type="text" id="contactName" name="name" required>
@@ -91,13 +86,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-newsletter">
                     <h3>Keep up with us</h3>
-                    <form class="footer-email-form">
+                    <form>
                         <input type="email" placeholder="Email sign up" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
@@ -108,15 +102,12 @@
                 <div class="footer-column">
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Support</a>
-                    <a href="#">Follow Us</a>
                 </div>
                 <div class="footer-column">
                     <a href="membership.html">Membership Info</a>
-                    <a href="#">Member Portal</a>
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </div>
                 <div class="footer-column">
-                    <a href="#">Upcoming Events</a>
                     <a href="about.html">Investment Opportunities</a>
                     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
                 </div>
@@ -128,6 +119,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

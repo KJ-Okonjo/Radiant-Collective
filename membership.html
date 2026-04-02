@@ -4,36 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership - Radiant Collective Capital</title>
-    <meta name="description" content="Become a member of Radiant Collective Capital">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header" id="siteHeader">
-        <div class="header-container">
-            <div class="header-left">
-                <a href="index.html" class="logo">Radiant Collective</a>
-            </div>
-            <nav class="header-center desktop-nav">
-                <a href="membership.html" class="active">Membership</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="header-right">
-                <a href="login.html" class="login-btn">Log In</a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo">Radiant Collective</a>
+                <nav class="header-nav desktop-hidden-mobile">
+                    <a href="membership.html" class="active">Membership</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="header-login desktop-hidden-mobile">Log In</a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
-        <nav class="mobile-nav">
+    <div class="mobile-menu">
+        <nav>
             <a href="membership.html">Membership</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
@@ -41,52 +40,46 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section membership-hero">
+    <section class="hero bg-base" style="min-height: 70vh;">
         <div class="container">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-headline animated-heading">Become a Member</h1>
-                <p class="hero-subheading">Get access to high-quality investment opportunities, curated education, and a trusted community of African and diaspora women investing to build power, legacy and prosperity.</p>
+            <div class="hero-content reveal-on-scroll">
+                <h1>Become a Member</h1>
+                <p>Get access to high-quality investment opportunities, curated education, and a trusted community of African and diaspora women investing to build power, legacy, and prosperity.</p>
             </div>
         </div>
     </section>
 
-    <!-- Who Should Apply Section -->
-    <section class="who-should-apply-section alternate-bg-1">
+    <section class="bg-alt-1">
         <div class="container">
-            <div class="who-content fade-in-up">
-                <p class="intro-text">Radiant is designed for ambitious, mission-driven women. Whether you're a seasoned investor or starting your journey, Radiant offers a path to build confidently.</p>
-                <div class="segments-grid">
-                    <div class="segment-card">
-                        <p>Entrepreneurs, executives or professionals with disposable capital</p>
-                    </div>
-                    <div class="segment-card">
-                        <p>Curious about investing but unsure where to begin</p>
-                    </div>
-                    <div class="segment-card">
-                        <p>Already investing, and ready to expand into new markets and opportunities</p>
-                    </div>
-                    <div class="segment-card">
-                        <p>Looking for trusted deal flow, clear education, and community accountability</p>
-                    </div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: var(--space-8);">
+                <p class="text-large mb-6">Radiant is designed for ambitious, mission-driven women. Whether you're a seasoned investor or starting your journey, Radiant offers a path to build confidently.</p>
+            </div>
+            <div class="grid-2">
+                <div class="feature-card">
+                    <p>Entrepreneurs, executives, or professionals with disposable capital</p>
+                </div>
+                <div class="feature-card">
+                    <p>Curious about investing but unsure where to begin</p>
+                </div>
+                <div class="feature-card">
+                    <p>Already investing and ready to expand into new markets</p>
+                </div>
+                <div class="feature-card">
+                    <p>Looking for trusted deal flow, clear education, and community accountability</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Application Section -->
-    <section class="application-section">
+    <section class="bg-base">
         <div class="container">
-            <div class="application-wrapper fade-in-up">
-                <h2 class="section-title animated-heading">Application</h2>
-                <form class="application-form" id="applicationForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="text-center mb-8">Application</h2>
+                <form id="applicationForm" style="background: #fff; padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email *</label>
@@ -97,7 +90,6 @@
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                     </div>
-
                     <div class="form-row">
                         <div class="form-group">
                             <label for="country">Country of Residence *</label>
@@ -108,73 +100,36 @@
                             <input type="text" id="industry" name="industry" required>
                         </div>
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="linkedin">LinkedIn Profile</label>
-                            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
-                        </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
                     </div>
-
                     <div class="form-group">
                         <label>Investment Experience *</label>
                         <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="investmentExperience" value="yes" required>
-                                <span>Yes</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="investmentExperience" value="no" required>
-                                <span>No</span>
-                            </label>
+                            <label class="radio-label"><input type="radio" name="investmentExperience" value="yes" required> Yes</label>
+                            <label class="radio-label"><input type="radio" name="investmentExperience" value="no" required> No</label>
                         </div>
                     </div>
-
-                    <div class="form-group conditional-group" id="investmentTypesGroup" style="display: none;">
+                    <div class="form-group" id="investmentTypesGroup" style="display: none;">
                         <label>If Yes, select investment types:</label>
                         <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="realEstate">
-                                <span>Real estate</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="crypto">
-                                <span>Crypto / digital assets</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="stocks">
-                                <span>Stocks / bonds / ETFs</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="privateEquity">
-                                <span>Private equity / venture capital</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="business">
-                                <span>Business ownership / franchise</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="investmentTypes" value="other">
-                                <span>Other</span>
-                            </label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="realEstate"> Real estate</label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="crypto"> Crypto / digital assets</label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="stocks"> Stocks / bonds / ETFs</label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="privateEquity"> Private equity / venture capital</label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="business"> Business ownership / franchise</label>
+                            <label class="checkbox-label"><input type="checkbox" name="investmentTypes" value="other"> Other</label>
                         </div>
-                        <input type="text" id="otherInvestment" name="otherInvestment" placeholder="Please specify" style="display: none; margin-top: 10px;">
+                        <input type="text" id="otherInvestment" name="otherInvestment" placeholder="Please specify" style="display: none; margin-top: var(--space-2);">
                     </div>
-
                     <div class="form-group">
                         <label>Previous Investment Group *</label>
                         <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="previousGroup" value="yes" required>
-                                <span>Yes</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="previousGroup" value="no" required>
-                                <span>No</span>
-                            </label>
+                            <label class="radio-label"><input type="radio" name="previousGroup" value="yes" required> Yes</label>
+                            <label class="radio-label"><input type="radio" name="previousGroup" value="no" required> No</label>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="readiness">Investment Readiness *</label>
                         <select id="readiness" name="readiness" required>
@@ -185,90 +140,78 @@
                             <option value="networking">I'm here for networking and education</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="motivation">Why do you want to join Radiant Collective Capital as a founding member? *</label>
                         <textarea id="motivation" name="motivation" rows="5" required></textarea>
                     </div>
-
                     <div class="form-group">
                         <label for="source">How did you hear about Radiant? *</label>
                         <input type="text" id="source" name="source" required>
                     </div>
-
                     <div class="form-group">
                         <label for="referral">Referral (optional)</label>
                         <input type="text" id="referral" name="referral" placeholder="Name of the person who referred you">
                     </div>
-
                     <div class="form-group">
-                        <label class="checkbox-label terms-checkbox">
+                        <label class="checkbox-label">
                             <input type="checkbox" name="terms" required>
-                            <span>I agree to the <a href="#">Terms and Conditions</a> *</span>
+                            <span>I agree to the <a href="#" style="color: var(--color-accent); text-decoration: underline;">Terms and Conditions</a> *</span>
                         </label>
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                    <button type="submit" class="btn btn-primary btn-full btn-large">Submit Application</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Member Value Section -->
-    <section class="member-value-section alternate-bg-2">
+    <section class="bg-alt-2">
         <div class="container">
-            <h2 class="section-title fade-in-up animated-heading">What You'll Unlock as a Member</h2>
-            <div class="value-grid">
-                <div class="value-card fade-in-up">
-                    <h3>Curated Investment Opportunities</h3>
-                    <p>Access vetted, professionally structured deals across real estate, fintech, hospitality and more.</p>
-                </div>
-                <div class="value-card fade-in-up">
-                    <h3>Wealth-Building and Impact Investing Academy</h3>
-                    <p>Learn how to evaluate opportunities, manage risk, and invest with confidence</p>
-                </div>
-                <div class="value-card fade-in-up">
-                    <h3>Global Sisterhood</h3>
-                    <p>Connect and collaborate with a trusted circle of women reshaping ownership and legacy</p>
-                </div>
+            <div class="section-header">
+                <h2>What You'll Unlock as a Member</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Membership Card Repeat -->
-    <section class="membership-repeat-section alternate-bg-3">
-        <div class="container">
-            <div class="membership-card-spotlight centered fade-in-up">
-                <div class="pricing-header">
-                    <h3>Annual Membership</h3>
-                    <div class="pricing">
-                        <span class="price-old">$650</span>
-                        <span class="price-arrow">→</span>
-                        <span class="price-new">$500</span>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4M12 8h.01"></path>
+                        </svg>
                     </div>
-                    <p class="pricing-note">Limited time Founding members' discount</p>
+                    <h3>Curated Investment Opportunities</h3>
+                    <p>Access vetted, professionally structured deals across real estate, fintech, hospitality, and more.</p>
                 </div>
-                <div class="membership-benefits">
-                    <ul class="tick-list">
-                        <li>Access to exclusive investment deals</li>
-                        <li>Invitations to investor salons and masterclasses</li>
-                        <li>Ongoing financial education and resources</li>
-                        <li>Connection to a vetted, values-aligned sisterhood</li>
-                        <li>A platform designed for scale, access, and real returns</li>
-                    </ul>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Wealth-Building and Impact Investing Academy</h3>
+                    <p>Learn how to evaluate opportunities, manage risk, and invest with confidence.</p>
                 </div>
-                <a href="#applicationForm" class="btn btn-primary btn-full">Apply</a>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Global Sisterhood</h3>
+                    <p>Connect and collaborate with a trusted circle of women reshaping ownership and legacy.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-newsletter">
                     <h3>Keep up with us</h3>
-                    <form class="footer-email-form">
+                    <form>
                         <input type="email" placeholder="Email sign up" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
@@ -279,15 +222,12 @@
                 <div class="footer-column">
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Support</a>
-                    <a href="#">Follow Us</a>
                 </div>
                 <div class="footer-column">
                     <a href="membership.html">Membership Info</a>
-                    <a href="#">Member Portal</a>
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </div>
                 <div class="footer-column">
-                    <a href="#">Upcoming Events</a>
                     <a href="about.html">Investment Opportunities</a>
                     <a href="https://linkedin.com" target="_blank">LinkedIn</a>
                 </div>
@@ -299,6 +239,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
