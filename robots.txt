@@ -1,0 +1,30 @@
+# Robots.txt for Radiant Collective Capital
+
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /assets/css/
+Allow: /assets/images/
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://radiantcollective.capital/sitemap.xml
+
+# Common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
