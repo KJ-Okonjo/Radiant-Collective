@@ -13,22 +13,20 @@ body {
     top: 24px;
     left: 50%;
     transform: translateX(-50%);
-    width: 88%;
+    width: 90%;
     max-width: 1400px;
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .floating-header-inner {
-    height: 68px;
-    background: #F7F7F7;
-    border-radius: 14px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    background: #FFFFFF;
+    border-radius: 22px;
+    display: flex;
     align-items: center;
-    padding: 0 32px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(8px);
+    justify-content: space-between;
+    padding: 14px 24px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
@@ -40,6 +38,7 @@ body {
 .header-logo-zone {
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
 }
 
 .header-logo-link {
@@ -60,17 +59,12 @@ body {
     display: block;
 }
 
-/* CENTER ZONE - Empty (intentional) */
+/* CENTER ZONE - Navigation */
 .header-center-zone {
-    /* Intentionally empty for balance */
-}
-
-/* RIGHT ZONE - Navigation System */
-.header-nav-zone {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    flex: 1 1 auto;
 }
 
 /* Nav Links */
@@ -87,7 +81,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #666;
+    color: #444;
     text-decoration: none;
     transition: color 0.2s ease;
     white-space: nowrap;
@@ -97,28 +91,34 @@ body {
     color: #1A1A1A;
 }
 
+/* RIGHT ZONE - CTA */
+.header-nav-zone {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
 /* CTA Button */
 .nav-cta {
-    background: #5FB878;
+    background: #5FAF7A;
     color: white;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    padding: 11px 20px;
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease;
     white-space: nowrap;
 }
 
 .nav-cta:hover {
-    background: #4FA768;
-    transform: translateY(-1px);
+    background: #4E9D68;
 }
 
 .nav-cta-arrow {
@@ -144,14 +144,12 @@ body {
 
 @media (max-width: 768px) {
     .floating-header {
-        width: 94%;
+        width: 92%;
         top: 16px;
     }
     
     .floating-header-inner {
-        height: 60px;
-        padding: 0 20px;
-        grid-template-columns: 1fr auto;
+        padding: 12px 20px;
     }
     
     .header-center-zone {
