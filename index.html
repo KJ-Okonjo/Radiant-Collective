@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiant Collective Capital - The Future Will Be Funded By African Women</title>
-    <meta name="description" content="Join the financial learning and co-investment community for African women building wealth, legacy, and prosperity.">
+    <title>Radiant Collective Capital - African Women. Funding the Future.</title>
+    <meta name="description" content="Radiant Collective Capital curates capital and operator networks to unlock high quality opportunities with precision and trust.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,8 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="stylesheet" href="assets/css/floating-header.css">
+    <link rel="stylesheet" href="assets/css/premium-hero.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -22,51 +24,85 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="index.html" class="header-logo">Radiant Collective</a>
-                
-                <nav class="header-nav desktop-hidden-mobile">
-                    <a href="membership.html">Membership</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                
-                <div class="header-actions">
-                    <a href="login.html" class="header-login desktop-hidden-mobile">Log In</a>
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+    <!-- Floating Header -->
+    <header class="floating-header">
+        <div class="floating-header-inner">
+            <!-- LEFT ZONE - Logo -->
+            <div class="header-logo-zone">
+                <a href="index.html" class="header-logo-link">
+                    <img src="assets/images/logos/radiantlogoblack.png" alt="Radiant Collective" class="header-logo-img">
+                </a>
+            </div>
+            
+            <!-- CENTER ZONE - Empty (intentional) -->
+            <div class="header-center-zone"></div>
+            
+            <!-- RIGHT ZONE - Navigation System -->
+            <div class="header-nav-zone">
+                <div class="nav-pill-container">
+                    <ul class="nav-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="login.html" class="nav-cta">
+                        Login
+                        <span class="nav-cta-arrow">→</span>
+                    </a>
                 </div>
             </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <nav>
-            <a href="membership.html">Membership</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Log In</a>
-        </nav>
-    </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="login.html" class="nav-cta mobile-nav-cta">
+            Login
+            <span class="nav-cta-arrow">→</span>
+        </a>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero bg-base">
-        <div class="container">
-            <div class="hero-content reveal-on-scroll">
-                <h1>The Future Will Be Funded By African Women</h1>
-                <p>Join the financial learning and co-investment community for African women building wealth, legacy, and prosperity.</p>
-                <div class="hero-cta">
-                    <a href="membership.html" class="btn btn-primary btn-large">Explore Membership</a>
-                    <a href="about.html" class="btn btn-secondary btn-large">Learn More</a>
+    <!-- Premium Hero Section -->
+    <section class="premium-hero">
+        <div class="premium-hero-container">
+            <div class="premium-hero-grid">
+                <!-- LEFT SIDE - Headline -->
+                <div class="premium-hero-left">
+                    <h1 class="premium-hero-headline">
+                        <span class="headline-line-1">African Women.</span>
+                        <span class="headline-line-2">Funding the Future.</span>
+                    </h1>
+                </div>
+                
+                <!-- RIGHT SIDE - Supporting Content -->
+                <div class="premium-hero-right">
+                    <p class="premium-hero-text">
+                        Radiant Collective Capital curates capital and operator networks to unlock high quality opportunities with precision and trust.
+                    </p>
+                    <a href="about.html" class="premium-hero-button">
+                        Learn More
+                        <span class="button-arrow">→</span>
+                    </a>
                 </div>
             </div>
+        </div>
+        
+        <!-- Image Layer -->
+        <div class="premium-hero-image-wrapper">
+            <img src="assets/images/68bf0b9b87ab94014dca4ed8_Woman in Pink Suit (1) Large.png" alt="Premium industrial energy" class="premium-hero-image">
         </div>
     </section>
 
@@ -303,6 +339,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/premium-interactions.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

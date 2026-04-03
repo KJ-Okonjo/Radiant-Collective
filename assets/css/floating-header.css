@@ -1,0 +1,264 @@
+/* ===================================
+   FLOATING HEADER - Premium Minimal
+   =================================== */
+
+/* Reset body top padding for floating header */
+body {
+    padding-top: 0;
+}
+
+/* Floating Header Container */
+.floating-header {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    max-width: 1400px;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-header-inner {
+    height: 68px;
+    background: #F7F7F7;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 32px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.floating-header.scrolled .floating-header-inner {
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT ZONE - Logo */
+.header-logo-zone {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.header-logo-link:hover {
+    opacity: 0.75;
+}
+
+.header-logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+/* CENTER ZONE - Empty (intentional) */
+.header-center-zone {
+    /* Intentionally empty for balance */
+}
+
+/* RIGHT ZONE - Navigation System */
+.header-nav-zone {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-pill-container {
+    background: #EFEFEF;
+    border-radius: 999px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #1A1A1A;
+}
+
+/* CTA Button */
+.nav-cta {
+    background: #C8A76B;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-cta:hover {
+    background: #B39659;
+}
+
+.nav-cta-arrow {
+    font-size: 13px;
+    transition: transform 0.2s ease;
+}
+
+.nav-cta:hover .nav-cta-arrow {
+    transform: translateX(2px);
+}
+
+/* Mobile Menu Toggle (hidden on desktop) */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .floating-header {
+        width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-header {
+        width: 94%;
+        top: 16px;
+    }
+    
+    .floating-header-inner {
+        height: 60px;
+        padding: 0 20px;
+        grid-template-columns: 1fr auto;
+    }
+    
+    .header-center-zone {
+        display: none;
+    }
+    
+    .header-nav-zone {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    .mobile-menu-toggle span {
+        width: 22px;
+        height: 2px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .header-logo-img {
+        height: 28px;
+    }
+}
+
+/* Mobile Menu Overlay */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-menu {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    max-width: 400px;
+    background: #F7F7F7;
+    border-radius: 14px;
+    padding: 24px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 0 16px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.mobile-nav-links a:hover {
+    background: #E5E5E5;
+}
+
+.mobile-nav-cta {
+    width: 100%;
+    justify-content: center;
+}
