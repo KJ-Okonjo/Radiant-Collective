@@ -69,22 +69,15 @@ body {
 .header-nav-zone {
     display: flex;
     justify-content: flex-end;
-}
-
-.nav-pill-container {
-    background: #EFEFEF;
-    border-radius: 999px;
-    padding: 7px 12px;
-    display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
 }
 
 /* Nav Links */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -94,7 +87,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #333;
+    color: #666;
     text-decoration: none;
     transition: color 0.2s ease;
     white-space: nowrap;
@@ -106,25 +99,26 @@ body {
 
 /* CTA Button */
 .nav-cta {
-    background: #C8A76B;
+    background: #5FB878;
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 9px 16px;
-    border-radius: 999px;
+    padding: 11px 20px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
     white-space: nowrap;
 }
 
 .nav-cta:hover {
-    background: #B39659;
+    background: #4FA768;
+    transform: translateY(-1px);
 }
 
 .nav-cta-arrow {
@@ -261,4 +255,9 @@ body {
 .mobile-nav-cta {
     width: 100%;
     justify-content: center;
+}
+
+/* Adjust background color to match hero */
+body {
+    background-color: #E8E6E1;
 }

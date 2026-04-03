@@ -8,8 +8,9 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: #fffcf7;
-    padding-top: 120px;
+    background: #E8E6E1;
+    padding-top: 140px;
+    padding-bottom: 0;
     overflow: hidden;
 }
 
@@ -25,10 +26,12 @@
 /* Two-Column Layout */
 .premium-hero-grid {
     display: grid;
-    grid-template-columns: 55% 45%;
-    gap: 64px;
-    align-items: start;
-    padding-top: 80px;
+    grid-template-columns: 50% 50%;
+    gap: 80px;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    min-height: 60vh;
 }
 
 /* LEFT SIDE - Headline */
@@ -46,15 +49,15 @@
 
 .headline-line-1 {
     display: block;
-    font-weight: 600;
+    font-weight: 700;
     color: #1A1A1A;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .headline-line-2 {
     display: block;
     font-weight: 400;
-    color: #E8AEB7;
+    color: #9B9B9B;
 }
 
 /* RIGHT SIDE - Supporting Content */
@@ -78,22 +81,21 @@
     align-items: center;
     gap: 8px;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    color: #333;
-    background: white;
-    border: 1px solid #E0E0E0;
-    border-radius: 999px;
-    padding: 10px 18px;
+    color: white;
+    background: #5FB878;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 20px;
     text-decoration: none;
     transition: all 0.25s ease;
     cursor: pointer;
 }
 
 .premium-hero-button:hover {
-    background: #F7F7F7;
-    border-color: #D0D0D0;
-    transform: translateX(2px);
+    background: #4FA768;
+    transform: translateY(-1px);
 }
 
 .button-arrow {
@@ -108,40 +110,39 @@
 /* IMAGE LAYER */
 .premium-hero-image-wrapper {
     position: absolute;
-    top: 50%;
-    right: -5%;
-    transform: translateY(-50%);
-    width: 58%;
-    height: 75vh;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 50vh;
     z-index: 1;
     opacity: 1;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .premium-hero.scrolled .premium-hero-image-wrapper {
-    transform: translateY(-48%) scale(0.96);
+    transform: translateY(10px) scale(0.98);
 }
 
 .premium-hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    border-radius: 16px;
+    object-position: top right;
+    border-radius: 0;
 }
 
-/* Gradient Overlay on Image (left fade) */
+/* Gradient Overlay on Image (top/left fade into background) */
 .premium-hero-image-wrapper::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(to right, 
-        rgba(255, 252, 247, 0.95) 0%, 
-        rgba(255, 252, 247, 0.6) 40%, 
-        rgba(255, 252, 247, 0) 100%
+    background: linear-gradient(to bottom right, 
+        rgba(232, 230, 225, 0.9) 0%, 
+        rgba(232, 230, 225, 0.4) 30%, 
+        rgba(232, 230, 225, 0) 60%
     );
     z-index: 2;
     pointer-events: none;
