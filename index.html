@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radiant Collective Capital</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/logos/radiantlogoicongold.png">
 </head>
 <body>
-    <!-- Header - constant across all pages -->
-    <header>
-        <div class="header-container">
-            <a href="/" class="logo">RADIANT BLACK</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/membership">Membership</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-                <a href="/login" class="login-btn">Log In</a>
+    <!-- HEADER (STICKY NAVIGATION) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- HEADER LEFT (LOGO) -->
+            <a href="index.html" class="header-logo">
+                <img src="assets/images/logos/radiantlogoblack.png" alt="Radiant Collective Capital" height="30">
+            </a>
+            
+            <!-- HEADER CENTER (NAV PILL CONTAINER) -->
+            <nav class="nav-pill-container">
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="membership.html" class="nav-item">Membership</a>
+                <a href="contact.html" class="nav-item">Contact</a>
             </nav>
+            
+            <!-- HEADER RIGHT (LOG IN BUTTON) -->
+            <a href="login.html" class="login-button">Log In</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1>African Women.<br>Funding the future.</h1>
-                <p>Radiant Collective Capital curates capital and operator networks to unlock high quality opportunities with precision and trust.</p>
+            <!-- LEFT TEXT BLOCK -->
+            <div class="hero-left">
+                <h1 class="hero-headline">African women.<br>Funding the future.</h1>
             </div>
-            <div class="hero-cta">
-                <a href="/about" class="learn-more-btn">Learn more</a>
+            
+            <!-- RIGHT IMAGE BLOCK -->
+            <div class="hero-image-wrapper">
+                <img src="assets/images/68b3610b1568ffba5de2922a_Woman in Yellow Shirt Photo Large.png" alt="African woman leader" class="hero-image">
+            </div>
+            
+            <!-- DESCRIPTION (RIGHT-SIDE TEXT BLOCK) -->
+            <div class="hero-right">
+                <div class="hero-description">
+                    <p>Radiant Collective Capital curates capital and operator networks to unlock high-quality opportunities with precision and trust.</p>
+                </div>
             </div>
         </div>
     </section>

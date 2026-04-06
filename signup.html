@@ -4,63 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Radiant Collective Capital</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/design-system.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/images/logos/radiantlogoicongold.png">
 </head>
-<body class="bg-base">
-    <div style="padding: var(--space-4); text-align: center;">
-        <a href="index.html" style="font-size: var(--font-xl); font-weight: var(--weight-semibold); color: var(--color-text-primary); text-decoration: none;">Radiant Collective</a>
-    </div>
+<body>
+    <!-- HEADER (STICKY NAVIGATION) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- HEADER LEFT (LOGO) -->
+            <a href="index.html" class="header-logo">
+                <img src="assets/images/logos/radiantlogoblack.png" alt="Radiant Collective Capital" height="30">
+            </a>
+            
+            <!-- HEADER CENTER (NAV PILL CONTAINER) -->
+            <nav class="nav-pill-container">
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="membership.html" class="nav-item">Membership</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+            
+            <!-- HEADER RIGHT (LOG IN BUTTON) -->
+            <a href="login.html" class="login-button">Log In</a>
+        </div>
+    </header>
 
+    <!-- AUTH PAGE -->
     <section class="auth-page">
-        <div class="container">
-            <div class="auth-card">
-                <h1>Sign Up</h1>
-                <p class="auth-subtitle">Join Radiant Collective</p>
+        <div class="auth-card">
+            <h1>Sign Up</h1>
+            <p class="auth-subtitle">Join Radiant Collective</p>
 
-                <a href="https://client.memberstack.com/auth-provider/login?provider=linkedin&appId=app_cmesp1uyv009y0wtmdi8lfp22&origin=www.radiantcollective.capital&allowSignup=true" class="btn btn-linkedin">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M18.5236 0H1.47639C0.660764 0 0 0.645833 0 1.44271V18.5573C0 19.3542 0.660764 20 1.47639 20H18.5236C19.3392 20 20 19.3542 20 18.5573V1.44271C20 0.645833 19.3392 0 18.5236 0ZM5.93229 17.0312H2.96563V7.48958H5.93229V17.0312ZM4.44896 6.19792C3.49479 6.19792 2.72396 5.42708 2.72396 4.47292C2.72396 3.51875 3.49479 2.74792 4.44896 2.74792C5.40313 2.74792 6.17396 3.51875 6.17396 4.47292C6.17396 5.42708 5.40313 6.19792 4.44896 6.19792ZM17.0365 17.0312H14.0698V12.4115C14.0698 11.2969 14.0490 9.86979 12.5240 9.86979C10.9781 9.86979 10.7490 11.0781 10.7490 12.3333V17.0312H7.78229V7.48958H10.6302V8.80208H10.6719C11.0781 8.02604 12.0469 7.20833 13.4844 7.20833C16.4896 7.20833 17.0365 9.19271 17.0365 11.7708V17.0312Z" fill="white"/>
-                    </svg>
-                    Continue with LinkedIn
-                </a>
+            <!-- LinkedIn Signup Button -->
+            <a href="https://client.memberstack.com/auth-provider/login?provider=linkedin&appId=app_cmesp1uyv009y0wtmdi8lfp22&origin=www.radiantcollective.capital&allowSignup=true" class="btn btn-linkedin">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M18.5236 0H1.47639C0.660764 0 0 0.645833 0 1.44271V18.5573C0 19.3542 0.660764 20 1.47639 20H18.5236C19.3392 20 20 19.3542 20 18.5573V1.44271C20 0.645833 19.3392 0 18.5236 0ZM5.93229 17.0312H2.96563V7.48958H5.93229V17.0312ZM4.44896 6.19792C3.49479 6.19792 2.72396 5.42708 2.72396 4.47292C2.72396 3.51875 3.49479 2.74792 4.44896 2.74792C5.40313 2.74792 6.17396 3.51875 6.17396 4.47292C6.17396 5.42708 5.40313 6.19792 4.44896 6.19792ZM17.0365 17.0312H14.0698V12.4115C14.0698 11.2969 14.0490 9.86979 12.5240 9.86979C10.9781 9.86979 10.7490 11.0781 10.7490 12.3333V17.0312H7.78229V7.48958H10.6302V8.80208H10.6719C11.0781 8.02604 12.0469 7.20833 13.4844 7.20833C16.4896 7.20833 17.0365 9.19271 17.0365 11.7708V17.0312Z" fill="white"/>
+                </svg>
+                Continue with LinkedIn
+            </a>
 
-                <div class="divider"><span>or</span></div>
+            <div class="divider"><span>or</span></div>
 
-                <form id="signupForm">
-                    <div class="form-group">
-                        <label for="signupName">Name</label>
-                        <input type="text" id="signupName" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupEmail">Email</label>
-                        <input type="email" id="signupEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupPassword">Password</label>
-                        <input type="password" id="signupPassword" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupPasswordConfirm">Confirm Password</label>
-                        <input type="password" id="signupPasswordConfirm" name="passwordConfirm" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="terms" required>
-                            <span>I agree to the <a href="#" style="color: var(--color-accent); text-decoration: underline;">Terms and Conditions</a></span>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
-                </form>
+            <!-- Email Signup Form -->
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Name</label>
+                    <input type="text" id="signupName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPasswordConfirm">Confirm Password</label>
+                    <input type="password" id="signupPasswordConfirm" name="passwordConfirm" required>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        I agree to the <a href="#" style="color: #000000; text-decoration: underline;">Terms and Conditions</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
 
-                <p class="auth-footer">Already have an account? <a href="login.html">Log in</a></p>
-            </div>
+            <p class="auth-footer">Already have an account? <a href="login.html">Log in</a></p>
         </div>
     </section>
 
