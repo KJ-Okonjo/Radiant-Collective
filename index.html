@@ -8,45 +8,47 @@
     <link rel="icon" type="image/png" href="assets/images/logos/radiantlogoicongold.png">
 </head>
 <body>
-    <!-- HEADER (STICKY NAVIGATION) -->
-    <header class="site-header">
-        <div class="header-inner">
-            <!-- HEADER LEFT (LOGO) -->
-            <a href="index.html" class="header-logo">
-                <img src="assets/images/logos/radiantlogoblack.png" alt="Radiant Collective Capital" height="30">
+    <!-- HEADER WRAPPER (FLOATING) -->
+    <div class="header-wrapper" id="hdr1">
+        <!-- HEADER CONTAINER (MAIN PILL BAR) -->
+        <div class="header-container" id="hdr2">
+            <!-- LEFT: LOGO -->
+            <a href="index.html" class="logo" id="hdr3">
+                <img src="assets/images/logos/radiantlogoblack.png" alt="Radiant Collective Capital" height="28">
             </a>
             
-            <!-- HEADER CENTER (NAV PILL CONTAINER) -->
-            <nav class="nav-pill-container">
-                <a href="about.html" class="nav-item">About Us</a>
-                <a href="membership.html" class="nav-item">Membership</a>
-                <a href="contact.html" class="nav-item">Contact</a>
-            </nav>
-            
-            <!-- HEADER RIGHT (LOG IN BUTTON) -->
-            <a href="login.html" class="login-button">Log In</a>
+            <!-- RIGHT GROUP (NAV + LOGIN) -->
+            <div class="header-right" id="hdr4">
+                <!-- NAVIGATION PILL (RIGHT-ALIGNED) -->
+                <nav class="nav-pill" id="hdr5">
+                    <a href="about.html" class="nav-item" id="hdr6">About Us</a>
+                    <a href="membership.html" class="nav-item">Membership</a>
+                    <a href="contact.html" class="nav-item">Contact</a>
+                </nav>
+                
+                <!-- LOGIN BUTTON (RECTANGLE) -->
+                <a href="login.html" class="login-btn" id="hdr7">Log In</a>
+            </div>
         </div>
-    </header>
+    </div>
 
     <!-- HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <!-- LEFT TEXT BLOCK -->
-            <div class="hero-left">
-                <h1 class="hero-headline">African women.<br>Funding the future.</h1>
-            </div>
+    <section class="hero" id="hero1">
+        <!-- LEFT TEXT BLOCK (BOTTOM-ANCHORED) -->
+        <div class="hero-text" id="hero2">
+            <!-- HEADLINE -->
+            <h1 class="hero-title" id="hero3">African women.<br>Funding the future.</h1>
             
-            <!-- RIGHT IMAGE BLOCK -->
-            <div class="hero-image-wrapper">
-                <img src="assets/images/68b3610b1568ffba5de2922a_Woman in Yellow Shirt Photo Large.png" alt="African woman leader" class="hero-image">
-            </div>
+            <!-- DESCRIPTION -->
+            <p class="hero-description" id="hero4">Radiant Collective Capital curates capital and operator networks to unlock high-quality opportunities with precision and trust.</p>
             
-            <!-- DESCRIPTION (RIGHT-SIDE TEXT BLOCK) -->
-            <div class="hero-right">
-                <div class="hero-description">
-                    <p>Radiant Collective Capital curates capital and operator networks to unlock high-quality opportunities with precision and trust.</p>
-                </div>
-            </div>
+            <!-- LEARN MORE BUTTON -->
+            <a href="about.html" class="hero-btn" id="hero5">Learn More</a>
+        </div>
+        
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image-wrapper" id="hero6">
+            <img src="assets/images/68b3610b1568ffba5de2922a_Woman in Yellow Shirt Photo Large.png" alt="African woman leader" class="hero-image" id="hero7">
         </div>
     </section>
 </body>
