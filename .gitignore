@@ -1,28 +1,3 @@
-# OS Files
+node_modules
+.next
 .DS_Store
-Thumbs.db
-desktop.ini
-
-# Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs
-*.log
-npm-debug.log*
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Build output (if using build tools later)
-dist/
-build/
-
-# Temporary files
-tmp/
-temp/
