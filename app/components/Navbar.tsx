@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -19,8 +22,12 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [isMenuOpen])
 
+  const navbarClasses = `main-navbar ${
+    isHomePage && !isScrolled ? 'transparent' : 'scrolled'
+  }`
+
   return (
-    <nav className={`main-navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={navbarClasses}>
       <div className="main-navbar__container">
         <Link href="/" className="main-navbar__logo">
           <Image 

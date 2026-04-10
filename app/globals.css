@@ -317,7 +317,10 @@ a { text-decoration: none; color: inherit; }
    ========================================================================== */
 .hero {
   min-height: 100vh;
-  background: var(--green-deep);
+  background-image: url("/hero-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,10 +333,9 @@ a { text-decoration: none; color: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(201, 165, 78, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(201, 165, 78, 0.04) 0%, transparent 50%);
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: none;
+  z-index: 0;
 }
 .hero__content {
   max-width: 800px;
@@ -1213,7 +1215,14 @@ a { text-decoration: none; color: inherit; }
   left: 0;
   right: 0;
   z-index: 1000;
+  background: rgba(27, 59, 45, 0.95);
+  backdrop-filter: blur(10px);
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.main-navbar.transparent {
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .main-navbar.scrolled {
@@ -1430,6 +1439,19 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
   background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-darker) 100%);
   padding: 40px 20px;
+  position: relative;
+}
+
+.auth-page__logo {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+}
+
+.auth-page__logo:hover {
+  opacity: 0.85;
 }
 
 .auth-container {
@@ -1444,12 +1466,6 @@ a { text-decoration: none; color: inherit; }
 .auth-header {
   text-align: center;
   margin-bottom: 40px;
-}
-
-.auth-header__logo {
-  margin: 0 auto 24px;
-  width: 160px;
-  height: auto;
 }
 
 .auth-header__title {
@@ -1545,6 +1561,12 @@ a { text-decoration: none; color: inherit; }
 .auth-form__button--secondary:hover {
   background: var(--green-deep);
   color: var(--white);
+}
+
+.auth-form__button--linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .auth-divider {
