@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Navbar from './components/Navbar'
 
 // ==========================================================================
 // HOOKS
@@ -80,51 +81,6 @@ function AnimatedCounter({ end, suffix, delay = 0 }: { end: number; suffix: stri
 function ScrollProgress() {
   const progress = useScrollProgress()
   return <div className="scroll-progress" style={{ width: `${progress}%` }} />
-}
-
-// ==========================================================================
-// NAVBAR
-// ==========================================================================
-function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [isMenuOpen])
-
-  return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar__wrapper">
-        <a href="#" className="navbar__logo">Radiant Collective</a>
-        <div className={`navbar__menu ${isMenuOpen ? 'is-open' : ''}`}>
-          <a href="#experience" className="navbar__link" onClick={() => setIsMenuOpen(false)}>The Experience</a>
-          <a href="#events" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Events</a>
-          <a href="#founder" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Founder</a>
-          <a href="#impact" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Impact</a>
-          <a href="#events" className="btn-primary btn-sm" onClick={() => setIsMenuOpen(false)}>
-            Book Your Seat
-          </a>
-        </div>
-        <div
-          className={`navbar__hamburger ${isMenuOpen ? 'is-active' : ''}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
-  )
 }
 
 // ==========================================================================
