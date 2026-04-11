@@ -23,7 +23,7 @@ export default function Navbar() {
   }, [isMenuOpen])
 
   const navbarClasses = `main-navbar ${
-    isHomePage && !isScrolled ? 'transparent' : 'scrolled'
+    !isScrolled ? 'transparent' : 'scrolled'
   }`
 
   return (

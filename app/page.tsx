@@ -96,42 +96,21 @@ function HeroSection() {
   return (
     <section className="hero">
       <div className="hero__content">
-        <div className={`hero__diamonds ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__diamond">✦</span>
-          <span className="hero__diamond">✦</span>
-          <span className="hero__diamond">✦</span>
-        </div>
         <p className={`overline hero__overline ${loaded ? 'loaded' : ''}`}>
-          Radiant Collective · VIP Mastermind
+          RADIANT COLLECTIVE
         </p>
         <h1 className={`h1-display hero__heading ${loaded ? 'loaded' : ''}`}>
-          The Leadership Mastermind Experience
+          African Women.<br />Funding the Future.
         </h1>
-        <div className={`hero__divider ${loaded ? 'loaded' : ''}`} />
         <p className={`body-lg hero__subheading ${loaded ? 'loaded' : ''}`}>
-          A Private Strategic Room for Women Building What Comes Next
-        </p>
-        <p className={`hero__tagline ${loaded ? 'loaded' : ''}`}>
-          Real Mastery · Peer Exchange · Strategic Collaboration
-        </p>
-        <div className={`hero__meta ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">Saturday 21 March 2026</span>
-          <span className="hero__meta-dot">·</span>
-          <span className="hero__meta-item">Fairlawns · Morningside · Johannesburg</span>
-        </div>
-        <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">10:00AM – 3:00PM</span>
-          <span className="hero__meta-dot">·</span>
-          <span className="hero__meta-item">25 Spots · 5 VIP Only</span>
-          <span className="hero__meta-dot">·</span>
-          <span className="hero__meta-item">$275 – $550</span>
-        </div>
-        <p className={`hero__application-note ${loaded ? 'loaded' : ''}`}>
-          By Registration
+          Join the financial learning and co-investment community for African women
         </p>
         <div className={`hero__cta ${loaded ? 'loaded' : ''}`}>
-          <a href="#events" className="btn-primary">
-            Book Your Seat
+          <a href="/membership" className="btn-hero btn-hero--primary">
+            Apply
+          </a>
+          <a href="/about" className="btn-hero btn-hero--secondary">
+            Learn More
           </a>
         </div>
       </div>
@@ -140,13 +119,109 @@ function HeroSection() {
 }
 
 // ==========================================================================
-// TAGLINE BANNER
+// LOGO SCROLL
 // ==========================================================================
-function TaglineBanner() {
+function LogoScroll() {
   return (
-    <div className="tagline-banner">
-      <p className="tagline-banner__text">This is not a conference. It is a mastermind.</p>
+    <div className="logo-scroll-container">
+      <div className="logo-track">
+        <img src="/assets/images/logos/logo-yahoo.svg" className="logo-item" alt="Yahoo" />
+        <img src="/assets/images/logos/logo-anthropic.svg" className="logo-item" alt="Anthropic" />
+        <img src="/assets/images/logos/logo-pinterest.svg" className="logo-item" alt="Pinterest" />
+        <img src="/assets/images/logos/logo-stripe.svg" className="logo-item" alt="Stripe" />
+        <img src="/assets/images/logos/logo-airbnb.svg" className="logo-item" alt="Airbnb" />
+        <img src="/assets/images/logos/logo-shopify.svg" className="logo-item" alt="Shopify" />
+        
+        <img src="/assets/images/logos/logo-yahoo.svg" className="logo-item" alt="Yahoo" />
+        <img src="/assets/images/logos/logo-anthropic.svg" className="logo-item" alt="Anthropic" />
+        <img src="/assets/images/logos/logo-pinterest.svg" className="logo-item" alt="Pinterest" />
+        <img src="/assets/images/logos/logo-stripe.svg" className="logo-item" alt="Stripe" />
+        <img src="/assets/images/logos/logo-airbnb.svg" className="logo-item" alt="Airbnb" />
+        <img src="/assets/images/logos/logo-shopify.svg" className="logo-item" alt="Shopify" />
+      </div>
     </div>
+  )
+}
+
+// ==========================================================================
+// TEXT ANIMATION SECTION
+// ==========================================================================
+function TextAnimationSection() {
+  const [visibleLines, setVisibleLines] = useState<number[]>([])
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ref.current) return
+      const lines = ref.current.querySelectorAll('.text-animation__line')
+      const newVisible: number[] = []
+      
+      lines.forEach((line, index) => {
+        const rect = line.getBoundingClientRect()
+        const inView = rect.top < window.innerHeight * 0.8 && rect.bottom > 0
+        if (inView) newVisible.push(index)
+      })
+      
+      setVisibleLines(newVisible)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const lines = [
+    "We are African women who believe in the power of financial literacy,",
+    "strategic investment, and collective ownership.",
+    "We are building a community where learning meets action,",
+    "where wealth is created together, and where legacy is intentional."
+  ]
+
+  return (
+    <section className="text-animation-section">
+      <div className="container">
+        <div ref={ref} className="text-animation__wrapper">
+          {lines.map((line, index) => (
+            <p
+              key={index}
+              className={`text-animation__line ${visibleLines.includes(index) ? 'visible' : ''}`}
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ==========================================================================
+// AFRICA MAP SECTION
+// ==========================================================================
+function AfricaMapSection() {
+  const { ref, isVisible } = useIntersectionObserver()
+
+  return (
+    <section className="africa-map-section">
+      <div className="container">
+        <div ref={ref} className={`africa-map__grid animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
+          <div className="africa-map__text">
+            <p className="africa-map__paragraph">
+              Radiant Collective is more than a membership—it&apos;s a movement. A space where African women across borders, sectors, and stages of wealth come together to learn, invest, and build. We are redefining what it means to own our financial futures, on our own terms.
+            </p>
+          </div>
+          <div className="africa-map__image-wrapper">
+            <Image
+              src="/assets/images/AfricaMap.png"
+              alt="Africa Map"
+              width={500}
+              height={600}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -649,7 +724,9 @@ export default function Home() {
       <Navbar />
       <main id="main-content">
         <HeroSection />
-        <TaglineBanner />
+        <LogoScroll />
+        <TextAnimationSection />
+        <AfricaMapSection />
         <ExperienceSection />
         <OutcomesSection />
         <TestimonialsSection />
