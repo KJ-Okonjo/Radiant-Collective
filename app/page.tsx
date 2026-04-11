@@ -84,7 +84,7 @@ function ScrollProgress() {
 }
 
 // ==========================================================================
-// HERO — Johannesburg Mastermind
+// HERO — Full Viewport
 // ==========================================================================
 function HeroSection() {
   const [loaded, setLoaded] = useState(false)
@@ -119,41 +119,16 @@ function HeroSection() {
 }
 
 // ==========================================================================
-// LOGO SCROLL
+// ANIMATED PARAGRAPH + IMAGE SECTION
 // ==========================================================================
-function LogoScroll() {
-  return (
-    <div className="logo-scroll-container">
-      <div className="logo-track">
-        <img src="/assets/images/logos/logo-yahoo.svg" className="logo-item" alt="Yahoo" />
-        <img src="/assets/images/logos/logo-anthropic.svg" className="logo-item" alt="Anthropic" />
-        <img src="/assets/images/logos/logo-pinterest.svg" className="logo-item" alt="Pinterest" />
-        <img src="/assets/images/logos/logo-stripe.svg" className="logo-item" alt="Stripe" />
-        <img src="/assets/images/logos/logo-airbnb.svg" className="logo-item" alt="Airbnb" />
-        <img src="/assets/images/logos/logo-shopify.svg" className="logo-item" alt="Shopify" />
-        
-        <img src="/assets/images/logos/logo-yahoo.svg" className="logo-item" alt="Yahoo" />
-        <img src="/assets/images/logos/logo-anthropic.svg" className="logo-item" alt="Anthropic" />
-        <img src="/assets/images/logos/logo-pinterest.svg" className="logo-item" alt="Pinterest" />
-        <img src="/assets/images/logos/logo-stripe.svg" className="logo-item" alt="Stripe" />
-        <img src="/assets/images/logos/logo-airbnb.svg" className="logo-item" alt="Airbnb" />
-        <img src="/assets/images/logos/logo-shopify.svg" className="logo-item" alt="Shopify" />
-      </div>
-    </div>
-  )
-}
-
-// ==========================================================================
-// TEXT ANIMATION SECTION
-// ==========================================================================
-function TextAnimationSection() {
+function AnimatedParagraphSection() {
   const [visibleLines, setVisibleLines] = useState<number[]>([])
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       if (!ref.current) return
-      const lines = ref.current.querySelectorAll('.text-animation__line')
+      const lines = ref.current.querySelectorAll('.animated-para__line')
       const newVisible: number[] = []
       
       lines.forEach((line, index) => {
@@ -171,54 +146,42 @@ function TextAnimationSection() {
   }, [])
 
   const lines = [
-    "We are African women who believe in the power of financial literacy,",
-    "strategic investment, and collective ownership.",
-    "We are building a community where learning meets action,",
-    "where wealth is created together, and where legacy is intentional."
+    "Connected from",
+    "coast to coast.",
+    "",
+    "Strategically located across Africa's coastline,",
+    "our terminals connect key import hubs with",
+    "industrial centers nationwide."
   ]
 
   return (
-    <section className="text-animation-section">
-      <div className="container">
-        <div ref={ref} className="text-animation__wrapper">
-          {lines.map((line, index) => (
-            <p
-              key={index}
-              className={`text-animation__line ${visibleLines.includes(index) ? 'visible' : ''}`}
-            >
-              {line}
-            </p>
-          ))}
+    <section className="animated-para-section">
+      <div className="animated-para__grid">
+        <div className="animated-para__left">
+          <div ref={ref}>
+            {lines.map((line, index) => (
+              <p
+                key={index}
+                className={`animated-para__line ${visibleLines.includes(index) ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 0.05}s` }}
+              >
+                {line}
+              </p>
+            ))}
+          </div>
+          <a href="/about" className="animated-para__button">
+            Learn More <span>→</span>
+          </a>
         </div>
-      </div>
-    </section>
-  )
-}
-
-// ==========================================================================
-// AFRICA MAP SECTION
-// ==========================================================================
-function AfricaMapSection() {
-  const { ref, isVisible } = useIntersectionObserver()
-
-  return (
-    <section className="africa-map-section">
-      <div className="container">
-        <div ref={ref} className={`africa-map__grid animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
-          <div className="africa-map__text">
-            <p className="africa-map__paragraph">
-              Radiant Collective is more than a membership—it&apos;s a movement. A space where African women across borders, sectors, and stages of wealth come together to learn, invest, and build. We are redefining what it means to own our financial futures, on our own terms.
-            </p>
-          </div>
-          <div className="africa-map__image-wrapper">
-            <Image
-              src="/assets/images/AfricaMap.png"
-              alt="Africa Map"
-              width={500}
-              height={600}
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
+        <div className="animated-para__right">
+          <Image
+            src="/assets/images/Gemini_Generated_Image_yv3ziwyv3ziwyv3z.png"
+            alt="Africa Map"
+            width={520}
+            height={600}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
         </div>
       </div>
     </section>
@@ -724,10 +687,7 @@ export default function Home() {
       <Navbar />
       <main id="main-content">
         <HeroSection />
-        <LogoScroll />
-        <TextAnimationSection />
-        <AfricaMapSection />
-        <ExperienceSection />
+        <AnimatedParagraphSection />
         <OutcomesSection />
         <TestimonialsSection />
         <MastermindSection />

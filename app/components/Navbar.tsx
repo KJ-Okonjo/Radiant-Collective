@@ -8,12 +8,22 @@ import { usePathname } from 'next/navigation'
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isOnLightBg, setIsOnLightBg] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      setIsScrolled(scrollY > 50)
+      
+      // Detect if on light background (after hero section)
+      const heroHeight = window.innerHeight
+      setIsOnLightBg(scrollY > heroHeight - 100)
+    }
+    
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -24,7 +34,7 @@ export default function Navbar() {
 
   const navbarClasses = `main-navbar ${
     !isScrolled ? 'transparent' : 'scrolled'
-  }`
+  } ${isOnLightBg && isHomePage ? 'on-light' : ''}`
 
   return (
     <nav className={navbarClasses}>
